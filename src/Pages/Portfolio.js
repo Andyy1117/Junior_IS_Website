@@ -8,17 +8,30 @@ import Image5 from '../img/Portfolio/Image5.jpg';
 import Image6 from '../img/Portfolio/Image6.jpg';
 
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { transition1 } from '/Users/agoor/Desktop/Junior_IS_Website/src/transition.js';
 
 const Portfolio = () => {
     return (
-        <section className='section'>
-            <div style={{ height: '700px', overflow: 'scroll' }}>
+        <motion.section 
+        initial={{ opacity: 0, y: '100%'}}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: '100%' }}
+        transition={transition1}
+        className='section'>
+            <div style={{ height: '900px', overflow: 'scroll' }}>
             <div className='container mx-auto h-full relative'>
                 <div className='flex flex-col lg:flex-row h-full
                 items-center justify-start gap-x-24 text-center
                 lg:text-left pt-24 lg:pt-36 pb-8'>
                     {/* text */}
-                    <div className='flex flex-col lg:items-start'>
+                    <motion.div 
+                        initial={{ opacity: 0, y: '-80%'}}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: '-80%' }}
+                        transition={transition1}
+                        className='flex flex-col lg:items-start'
+                        >
                         <h1 className='h1'>Portfolio</h1>
                         <p className='mb-12 max-2-sm'>
                             Most of my pictures are taken in the city of Manhattan, New York.
@@ -27,7 +40,7 @@ const Portfolio = () => {
                         mx-auto lg:mx-0'>
                             Contact
                         </Link>
-                    </div>
+                    </motion.div>
                     {/* image grid */}
                     <div className='grid grid-cols-2 lg:gap-2'>
                         {/* image */}
@@ -86,11 +99,10 @@ const Portfolio = () => {
                             />
                         </div>
                     </div>
+                    </div>
                 </div>
                 </div>
-                </div>
-            Portfolio
-        </section>
+        </motion.section>
     );
 };
 
