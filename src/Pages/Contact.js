@@ -1,16 +1,12 @@
-//import React, { useContext } from 'react';
-// import images
-import TimeSquare from '../img/Contact/Image6.jpg';
-// import motion
+// import dependencies 
 import { motion } from 'framer-motion';
-// import transition
 import { transition1 } from '/Users/agoor/Desktop/Junior_IS_Website/src/transition.js';
-// import context
-//import { CursorContext } from '../context/CursorContext';
+
+// import images 
+import TimeSquare from '../img/Contact/Image6.jpg';
 
 const Contact = () => {
-  //const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext);
-
+  
   return (
     <motion.section
       initial={{ opacity: 0, y: '100%' }}
@@ -19,7 +15,8 @@ const Contact = () => {
       transition={transition1}
       className='section bg-white'
     >
-      <div style={{ height: '900px', overflow: 'scroll' }}>
+      {/*scrolling behavior*/}
+      <div style={{ height: '900px', overflow: 'scroll' }}> 
         <div className='container mx-auto h-full'>
           <div className='flex flex-col lg:flex-row h-full items-center justify-start pt-36 gap-x-8 text-center lg:text-left'>
             {/* bg */}
@@ -32,40 +29,36 @@ const Contact = () => {
             ></motion.div>
             {/* text & form */}
             <div
-            //onMouseEnter={mouseEnterHandler}
-            //onMouseLeave={mouseLeaveHandler}
               className='lg:flex-1 lg:pt-32 px-4'
             >
-              <h1 className='h1'>연락처</h1>
-              <p className='mb-12'>요청/요구 사항</p>
+              <h1 className='h1'>Contact</h1>
+              <p className='mb-12'>Requests</p>
               {/* form */}
               <form className='flex flex-col gap-y-4'>
                 <div className='flex gap-x-10'>
                   <input
                     className='outline-none border-b border-b-primary h-[60px] bg-transparent font-secondary w-full pl-3 placeholder:text-[#757879]'
                     type='text'
-                    placeholder='이름'
+                    placeholder='Name'
                   />
                   <input
                     className='outline-none border-b border-b-primary h-[60px] bg-transparent font-secondary w-full pl-3 placeholder:text-[#757879]'
                     type='text'
-                    placeholder='이메일'
+                    placeholder='Email'
                   />
                 </div>
                 <input
                   className='outline-none border-b border-b-primary h-[60px] bg-transparent font-secondary w-full pl-3 placeholder:text-[#757879]'
                   type='text'
-                  placeholder='요청 사항'
+                  placeholder='Request'
                 />
                 <button className='btn mb-[30px] mx-auto lg:mx-0 self-start'>
-                  보내기
+                  Submit
                 </button>
               </form>
             </div>
             {/* image */}
             <motion.div
-            //onMouseEnter={mouseEnterHandler}
-            //onMouseLeave={mouseLeaveHandler}
               initial={{ opacity: 0, y: '100%' }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: '100%' }}

@@ -1,5 +1,10 @@
+// import all dependencies
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { transition1 } from '/Users/agoor/Desktop/Junior_IS_Website/src/transition.js';
 
+// import images
 import Image1 from '../img/Portfolio/Image1.jpg';
 import Image2 from '../img/Portfolio/Image2.jpg';
 import Image3 from '../img/Portfolio/Image3.jpg';
@@ -7,12 +12,9 @@ import Image4 from '../img/Portfolio/Image4.jpg';
 import Image5 from '../img/Portfolio/Image5.jpg';
 import Image6 from '../img/Portfolio/Image6.jpg';
 
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { transition1 } from '/Users/agoor/Desktop/Junior_IS_Website/src/transition.js';
-
 const Portfolio = () => {
     return (
+        // wrap the UI in a framer-motion component to enable animations and transitions
         <motion.section 
         initial={{ opacity: 0, y: '100%'}}
         animate={{ opacity: 1, y: 0 }}
@@ -34,7 +36,8 @@ const Portfolio = () => {
                         >
                         <h1 className='h1'>Portfolio</h1>
                         <p className='mb-12 max-2-sm'>
-                            Most of my pictures are taken in the city of Manhattan, New York.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam suscipit leo eu libero semper, a lacinia elit suscipit. 
+                        Sed non maximus velit. 
                         </p>
                         <Link to={'/contact'} className='btn mb-[30px]
                         mx-auto lg:mx-0'>
@@ -42,8 +45,8 @@ const Portfolio = () => {
                         </Link>
                     </motion.div>
                     {/* image grid */}
-                    <div className='grid grid-cols-2 lg:gap-2'>
-                        {/* image */}
+                    <div className='grid grid-cols-3 lg:gap-4'>
+                        {/* images displayed */}
                         <div className='max-w-[150px] lg:max-w-[200px] h-
                         [112px] lg:h-[220px] bg-accent overflow-hidden'>
                             <img 

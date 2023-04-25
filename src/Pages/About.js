@@ -1,10 +1,13 @@
+// import dependencies 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Me from '../img/About/me.jpg'; 
 import { motion } from 'framer-motion';
 import { transition1 } from '/Users/agoor/Desktop/Junior_IS_Website/src/transition.js';
 
+// import images 
+import Me from '../img/About/me.jpg'; 
 
+// define the About Component
 const About = () => {
     return (
         <motion.section 
@@ -34,12 +37,12 @@ const About = () => {
                     lg:w-auto z-10 flex flex-col justify-relative
                     items-center lg:items-start'>
                         <h1 className='h1' > About me</h1>
-                        <p className='mb-12'>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id purus sit amet sapien mollis elementum. Integer imperdiet dapibus velit, a convallis nulla euismod a. 
-                        </p>
-                        <br />
-                        <br />
-                        <Link t={'/portfolio'} className='btn'>
+                            <p className='mb-12'>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id purus sit amet sapien mollis elementum. Integer imperdiet dapibus velit, a convallis nulla euismod a. 
+                            </p>
+                            <br />
+                            <br />
+                        <Link to={'/portfolio'} className='btn'>
                             View my work
                         </Link>
                     </motion.div>
